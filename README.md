@@ -1,2 +1,2 @@
-## Hi i am sriza 👋
+## Hi i am srijana 👋
 
