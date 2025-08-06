@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "AzureDataFactorysaesha"
 		},
+		"AzureBlobStorage_LR_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage_LR'"
+		},
 		"AzureSqlDatabase_LS_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase_LS'"
@@ -65,6 +69,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage_LR_connectionString": {
+						"value": "[parameters('AzureBlobStorage_LR_connectionString')]"
 					},
 					"AzureSqlDatabase_LS_password": {
 						"value": "[parameters('AzureSqlDatabase_LS_password')]"

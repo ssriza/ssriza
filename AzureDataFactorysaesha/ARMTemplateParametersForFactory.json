@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "AzureDataFactorysaesha"
 		},
+		"AzureBlobStorage_LR_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase_LS_password": {
 			"value": ""
 		},
