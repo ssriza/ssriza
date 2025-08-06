@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "AzureDataFactorysaesha"
+		},
+		"AzureSqlDatabase_LS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase_LS'"
+		},
+		"AzureSynapseAnalytics_lr_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSynapseAnalytics_lr'"
+		},
+		"AzureSqlDatabase_LS_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlservermaya.database.windows.net"
+		},
+		"AzureSqlDatabase_LS_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dataengineer"
+		},
+		"AzureSqlDatabase_LS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"AzureSynapseAnalytics_lr_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlservermaya.database.windows.net"
+		},
+		"AzureSynapseAnalytics_lr_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sqlpoolname"
+		},
+		"AzureSynapseAnalytics_lr_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "AzureDataFactorysaesha_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase_LS_password": {
+						"value": "[parameters('AzureSqlDatabase_LS_password')]"
+					},
+					"AzureSynapseAnalytics_lr_password": {
+						"value": "[parameters('AzureSynapseAnalytics_lr_password')]"
+					},
+					"AzureSqlDatabase_LS_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase_LS_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase_LS_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase_LS_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase_LS_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase_LS_properties_typeProperties_userName')]"
+					},
+					"AzureSynapseAnalytics_lr_properties_typeProperties_server": {
+						"value": "[parameters('AzureSynapseAnalytics_lr_properties_typeProperties_server')]"
+					},
+					"AzureSynapseAnalytics_lr_properties_typeProperties_database": {
+						"value": "[parameters('AzureSynapseAnalytics_lr_properties_typeProperties_database')]"
+					},
+					"AzureSynapseAnalytics_lr_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSynapseAnalytics_lr_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
