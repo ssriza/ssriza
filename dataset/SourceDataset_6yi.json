@@ -1,0 +1,16 @@
+{
+	"name": "SourceDataset_6yi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "OM_EMPLOYEE"
+		}
+	}
+}
