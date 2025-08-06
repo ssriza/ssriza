@@ -1,0 +1,36 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_LR",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "etluser_credentials.csv",
+				"container": "containter1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "User name",
+				"type": "String"
+			},
+			{
+				"name": "Password",
+				"type": "String"
+			},
+			{
+				"name": "Console sign-in URL",
+				"type": "String"
+			}
+		]
+	}
+}
