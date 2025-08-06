@@ -1,0 +1,11 @@
+{
+	"name": "DestinationDataset_6yi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics_lr",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable"
+	}
+}
