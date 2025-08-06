@@ -6,6 +6,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "AzureSqlDWTable"
+		"type": "AzureSqlDWTable",
+		"typeProperties": {
+			"tableName": "[dbo].[OM_EMPLOYEE]"
+		}
 	}
 }
