@@ -17,6 +17,10 @@
 					{
 						"name": "Source",
 						"value": "dbo.OM_EMPLOYEE"
+					},
+					{
+						"name": "Sink",
+						"value": "dbo.OM_EMPLOYEE"
 					}
 				],
 				"typeProperties": {
@@ -26,7 +30,9 @@
 					},
 					"sink": {
 						"type": "SqlDWSink",
-						"writeBehavior": "Insert"
+						"writeBehavior": "Insert",
+						"sqlWriterUseTableLock": true,
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"dataIntegrationUnits": 4
