@@ -2,7 +2,7 @@
 	"name": "SourceDataset_6yi",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase_LS",
+			"referenceName": "SqlDatabaselinked",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -17,14 +17,8 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": {
-				"value": "@dataset().dbname",
-				"type": "Expression"
-			},
-			"table": {
-				"value": "@dataset().tablename",
-				"type": "Expression"
-			}
+			"schema": "dbo",
+			"table": "OM_EMPLOYEE"
 		}
 	}
 }
