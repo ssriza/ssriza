@@ -1,0 +1,31 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "SourceDataset_6yi",
+						"type": "DatasetReference"
+					},
+					"name": "SQlDB"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "filterresults",
+					"description": "adding filter"
+				}
+			],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> SQlDB",
+				"SQlDB filter(NO_OF_KIDS > 1) ~> filterresults"
+			]
+		}
+	}
+}
