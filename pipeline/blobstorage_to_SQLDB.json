@@ -29,11 +29,18 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": true,
-						"tableOption": "autoCreate",
+						"sqlWriterUseTableLock": false,
 						"disableMetricsCollection": false
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedService1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "outputcontainer",
+						"enableCompression": true
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"typeConversion": true,
