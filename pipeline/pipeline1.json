@@ -41,22 +41,8 @@
 						},
 						"path": "outputcontainer",
 						"enableCompression": false
-					},
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
 					}
 				},
-				"inputs": [
-					{
-						"referenceName": "DelimitedText4",
-						"type": "DatasetReference"
-					}
-				],
 				"outputs": [
 					{
 						"referenceName": "SourceDataset_6yi",

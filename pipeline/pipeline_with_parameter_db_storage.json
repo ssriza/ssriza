@@ -31,35 +31,11 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "SourceDataset_6yi",
-						"type": "DatasetReference",
-						"parameters": {
-							"dbname": {
-								"value": "@pipeline().parameters.dbname",
-								"type": "Expression"
-							},
-							"tablename": {
-								"value": "@pipeline().parameters.tablename",
-								"type": "Expression"
-							}
-						}
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "DelimitedText5",
 						"type": "DatasetReference"
 					}
 				]
