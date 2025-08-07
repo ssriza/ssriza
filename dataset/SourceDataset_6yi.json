@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "STUDENT_DETAILS_OK"
+			"table": "STUDENT_DETAILS_AUSTIN"
 		}
 	}
 }
