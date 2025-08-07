@@ -1,0 +1,59 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "sqldbconnection",
+						"type": "DatasetReference"
+					},
+					"name": "SQLDB"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText6",
+						"type": "DatasetReference"
+					},
+					"name": "storage"
+				}
+			],
+			"transformations": [
+				{
+					"name": "filterresults"
+				},
+				{
+					"name": "sortdata"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          EMPLOYEE_ID as integer,",
+				"          FIRSTNAME as string,",
+				"          LASTNAME as string,",
+				"          DATE_OF_BIRTH as date,",
+				"          SALARY as double,",
+				"          PHONE_NO as string,",
+				"          CITY as string,",
+				"          STATE as string,",
+				"          MARITAL_STATUS as string,",
+				"          NO_OF_KIDS as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> SQLDB",
+				"SQLDB filter(NO_OF_KIDS>1) ~> filterresults",
+				"filterresults sort(asc(SALARY, true),",
+				"     caseInsensitive: true) ~> sortdata",
+				"sortdata sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> storage"
+			]
+		}
+	}
+}

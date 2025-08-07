@@ -1,0 +1,60 @@
+{
+	"name": "sqldbconnection",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlDatabaselinked",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EMPLOYEE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FIRSTNAME",
+				"type": "varchar"
+			},
+			{
+				"name": "LASTNAME",
+				"type": "varchar"
+			},
+			{
+				"name": "DATE_OF_BIRTH",
+				"type": "date"
+			},
+			{
+				"name": "SALARY",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PHONE_NO",
+				"type": "varchar"
+			},
+			{
+				"name": "CITY",
+				"type": "varchar"
+			},
+			{
+				"name": "STATE",
+				"type": "varchar"
+			},
+			{
+				"name": "MARITAL_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "NO_OF_KIDS",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "OM_EMPLOYEE"
+		}
+	}
+}
