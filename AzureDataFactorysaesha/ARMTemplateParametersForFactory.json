@@ -14,6 +14,9 @@
 		"AzureSynapseAnalytics_lr_password": {
 			"value": ""
 		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase_LS_properties_typeProperties_server": {
 			"value": "sqlservermaya.database.windows.net"
 		},
