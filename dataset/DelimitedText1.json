@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "yellow_tripdata_2015-01 (1).csv",
-				"container": "containter1"
+				"container": "outputcontainer"
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",
