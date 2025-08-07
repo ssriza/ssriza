@@ -67,10 +67,12 @@
 		],
 		"parameters": {
 			"dbname": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "dbo"
 			},
 			"tablename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "om_employee"
 			}
 		},
 		"annotations": []
