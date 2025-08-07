@@ -72,7 +72,7 @@
 			},
 			"tablename": {
 				"type": "string",
-				"defaultValue": "om_employee"
+				"defaultValue": "sejal"
 			}
 		},
 		"annotations": []
