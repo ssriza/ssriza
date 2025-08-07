@@ -85,11 +85,18 @@
 							"sink": {
 								"type": "AzureSqlSink",
 								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": true,
-								"tableOption": "autoCreate",
+								"sqlWriterUseTableLock": false,
 								"disableMetricsCollection": false
 							},
-							"enableStaging": false,
+							"enableStaging": true,
+							"stagingSettings": {
+								"linkedServiceName": {
+									"referenceName": "linkedService1",
+									"type": "LinkedServiceReference"
+								},
+								"path": "outputcontainer",
+								"enableCompression": true
+							},
 							"translator": {
 								"type": "TabularTranslator",
 								"typeConversion": true,
@@ -122,7 +129,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/DelimitedText4')]",
-				"[concat(variables('factoryId'), '/datasets/SourceDataset_6yi')]"
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_6yi')]",
+				"[concat(variables('factoryId'), '/linkedServices/linkedService1')]"
 			]
 		},
 		{
@@ -569,7 +577,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "OM_EMPLOYEE"
+					"table": "yellow_taxi_trips"
 				}
 			},
 			"dependsOn": [
