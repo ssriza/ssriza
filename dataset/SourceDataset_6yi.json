@@ -5,12 +5,26 @@
 			"referenceName": "AzureSqlDatabase_LS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"dbname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "dbo",
-			"table": "yellow_taxi_trips"
+			"schema": {
+				"value": "@dataset().dbname",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
 		}
 	}
 }
