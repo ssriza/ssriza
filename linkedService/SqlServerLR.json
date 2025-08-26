@@ -7,11 +7,11 @@
 		"typeProperties": {
 			"server": "DESKTOP-8T0BNG5\\SQLEXPRESS",
 			"database": "AdventureWorks2019",
-			"encrypt": "mandatory",
+			"encrypt": "optional",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
-			"userName": "DESKTOP-8T0BNG5\\Birendra",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4YzUzMmFhYy0zMWI2LTQyYzEtYTJkZi01Y2E4YWE5YWZjZDIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"userName": "sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3MDg3MjE4ZS1mOWY5LTQ4M2EtYmYyNS00MzM4NmY3ZTVkN2IiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "selfhostedIR",
