@@ -1,0 +1,21 @@
+{
+	"name": "SqlServerLR",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "DESKTOP-8T0BNG5\\SQLEXPRESS",
+			"database": "AdventureWorks2019",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "DESKTOP-8T0BNG5\\Birendra",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4YzUzMmFhYy0zMWI2LTQyYzEtYTJkZi01Y2E4YWE5YWZjZDIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhostedIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
