@@ -1,5 +1,5 @@
 {
-	"name": "pipelineSQL",
+	"name": "pipelinecopytableusingforeach",
 	"properties": {
 		"activities": [
 			{
@@ -69,12 +69,14 @@
 									"partitionOption": "None"
 								},
 								"sink": {
-									"type": "ParquetSink",
+									"type": "DelimitedTextSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "ParquetWriteSettings"
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
 									}
 								},
 								"enableStaging": false,
@@ -95,18 +97,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "Parquetlinkedservice",
-									"type": "DatasetReference",
-									"parameters": {
-										"tablename": {
-											"value": "@item().TableName",
-											"type": "Expression"
-										},
-										"schemaname": {
-											"value": "@item().SchemaName",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "DelimitedText7",
+									"type": "DatasetReference"
 								}
 							]
 						}
