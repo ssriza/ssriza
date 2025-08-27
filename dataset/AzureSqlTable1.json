@@ -2,7 +2,7 @@
 	"name": "AzureSqlTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabaseLR",
+			"referenceName": "AzureSqlDatabase2lr",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -40,7 +40,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "transactions"
+			"table": "products"
 		}
 	}
 }
