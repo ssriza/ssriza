@@ -2,7 +2,7 @@
 	"name": "Parquet1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage2",
+			"referenceName": "AzureDataLakeStorage3",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "bronze/product",
+				"folderPath": "bronze/store",
 				"fileSystem": "retailcontainer"
 			},
 			"compressionCodec": "snappy"
